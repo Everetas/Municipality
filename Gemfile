@@ -26,6 +26,9 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# YamlDb is a database-independent format for dumping and restoring data
+gem 'yaml_db'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
