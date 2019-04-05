@@ -1,5 +1,17 @@
-<h1>Municipality#index</h1>
-<p>Find me in app/views/municipality/index.html.erb</p>
-<p><%= @administrator.name %></p>
-<p><%= @street.name %></p>
-<p><%= @building.number %></p>
+<h1>Municipality administrators</h1>
+
+<h1>--------------------------------------</h1>
+
+<div><%-
+  for uncleanedBuilding in @uncleanedBuildings do %>
+      <div>
+        <%= Street.where(id: uncleanedBuilding.street_id)[0].name %>
+        <%= uncleanedBuilding.number %>
+        <% @administrator = Administrator.where(id: uncleanedBuilding.administrator_id) %>
+        <%= @administrator[0].name %>
+        <%= @administrator[0].phone %>
+      </div>
+  <%- end
+%></div>
+
+<h1>--------------------------------------</h1>
