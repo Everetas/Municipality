@@ -1,17 +1,37 @@
-<h1>Municipality administrators</h1>
-
-<h1>--------------------------------------</h1>
-
-<div><%-
-  for uncleanedBuilding in @uncleanedBuildings do %>
-      <div>
-        <%= Street.where(id: uncleanedBuilding.street_id)[0].name %>
-        <%= uncleanedBuilding.number %>
-        <% @administrator = Administrator.where(id: uncleanedBuilding.administrator_id) %>
-        <%= @administrator[0].name %>
-        <%= @administrator[0].phone %>
+<div class="limiter">
+  <div class="container-table100">
+    <div class="wrap-table100">
+      <div class="table100">
+        <table>
+          <thead>
+            <tr class="table100-head">
+              <th class="column1">Street</th>
+              <th class="column2">Building Number</th>
+              <th class="column4">Administrator</th>
+              <th class="column6">Phone Number</th>
+            </tr>
+          </thead>
+          <tbody>
+            <%- for uncleanedBuilding in @uncleanedBuildings do %>
+              <tr>
+                <td class="column1">
+                  <%= Street.where(id: uncleanedBuilding.street_id)[0].name %>
+                </td>
+                <td class="column2">
+                  <%= uncleanedBuilding.number %>
+                </td>
+                <%- @administrator = Administrator.where(id: uncleanedBuilding.administrator_id) %>
+                  <td class="column4">
+                    <%= @administrator[0].name %>
+                  </td>
+                  <td class="column6">
+                    <%= @administrator[0].phone %>
+                  </td>
+                </tr>
+                <%- end %>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
       </div>
-  <%- end
-%></div>
-
-<h1>--------------------------------------</h1>
