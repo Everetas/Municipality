@@ -25,10 +25,12 @@ development:
   <<: *default
   adapter: postgresql
   encoding: unicode
-  database: municipality
+  database: d8thv9352796mo
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: municipality
-  password: municipalitypassword
+  username: igilkklqxutrwl
+  password: 992f06652fc503ce363ef1ba76e2fa7bf746a9fd8544ce86cd16bae1f80924d1
+  host: ec2-54-247-85-251.eu-west-1.compute.amazonaws.com
+  port: 5432
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -64,10 +66,12 @@ test:
   <<: *default
   adapter: postgresql
   encoding: unicode
-  database: municipality
+  database: d8thv9352796mo
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: municipality
-  password: municipalitypassword
+  username: igilkklqxutrwl
+  password: 992f06652fc503ce363ef1ba76e2fa7bf746a9fd8544ce86cd16bae1f80924d1
+  host: ec2-54-247-85-251.eu-west-1.compute.amazonaws.com
+  port: 5432
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -92,7 +96,9 @@ production:
   <<: *default
   adapter: postgresql
   encoding: unicode
-  database: municipality
+  database: d8thv9352796mo
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: municipality
-  password: municipalitypassword
+  username: igilkklqxutrwl
+  password: 992f06652fc503ce363ef1ba76e2fa7bf746a9fd8544ce86cd16bae1f80924d1
+  host: ec2-54-247-85-251.eu-west-1.compute.amazonaws.com
+  port: 5432
