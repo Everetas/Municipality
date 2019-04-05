@@ -231,10 +231,10 @@ tbody tr:hover {
     content: "Street";
   }
   table tbody tr td:nth-child(2):before {
-    content: "Building Number";
+    content: "Building";
   }
   table tbody tr td:nth-child(3):before {
-    content: "Administrator";
+    content: "Company/Administrator";
   }
   table tbody tr td:nth-child(4):before {
     content: "Phone Number";
